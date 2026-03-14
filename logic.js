@@ -192,7 +192,7 @@ document.querySelectorAll(".number-input button").forEach(btn => {
   }
 
 
-  btn.addEventListener("mousedown", (e) => {
+  btn.addEventListener("pointerdown", (e) => {
 
     step(e)
 
@@ -213,29 +213,22 @@ document.querySelectorAll(".number-input input").forEach(input => {
 
   input.addEventListener("keydown", (e) => {
 
+    if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return
+
+    e.preventDefault()
+
     let multiplier = 1
 
     if (e.ctrlKey) multiplier = 10
     else if (e.shiftKey) multiplier = 5
 
-    if (e.key === "ArrowUp") {
+    const delta = e.key === "ArrowUp" ? multiplier : -multiplier
 
-      adjustValue(input, multiplier)
-      e.preventDefault()
-
-    }
-
-    if (e.key === "ArrowDown") {
-
-      adjustValue(input, -multiplier)
-      e.preventDefault()
-
-    }
+    adjustValue(input, delta)
 
   })
 
 })
-
 
 // ---------- event listeners ----------
 
