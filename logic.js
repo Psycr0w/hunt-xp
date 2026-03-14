@@ -71,7 +71,7 @@ function buildHunterTable(restXP) {
 
   for (const [name, xp] of sortedActions()) {
 
-    const count = xp ? Math.round(restXP / xp) : ""
+    const count = xp ? Math.ceil(restXP / xp) : ""
 
     output +=
       name.padEnd(18) +
@@ -97,7 +97,7 @@ function buildBloodlineTable(restXP) {
   output +=
     "lvl 50 Hunter".padEnd(22) +
     full.toString().padStart(8) +
-    Math.round(restXP / full).toString().padStart(8) +
+    Math.ceil(restXP / full).toString().padStart(8) +
     "\n"
 
   const retirement = data.bloodlineActions["Retirement"]
@@ -105,7 +105,7 @@ function buildBloodlineTable(restXP) {
   output +=
     "Old Folks Home".padEnd(22) +
     retirement.toString().padStart(8) +
-    Math.round(restXP / retirement).toString().padStart(8) +
+    Math.ceil(restXP / retirement).toString().padStart(8) +
     "\n"
 
   const poster = data.bloodlineActions["Poster"]
@@ -113,14 +113,14 @@ function buildBloodlineTable(restXP) {
   output +=
     "Poster".padEnd(22) +
     poster.toString().padStart(8) +
-    Math.round(restXP / poster).toString().padStart(8) +
+    Math.ceil(restXP / poster).toString().padStart(8) +
     "\n"
 
   output += "\n"
 
   for (const [name, xp] of sortedActions()) {
 
-    const count = xp ? Math.round(restXP / xp) : ""
+    const count = xp ? Math.ceil(restXP / xp) : ""
 
     output +=
       name.padEnd(22) +
@@ -182,7 +182,10 @@ document.querySelectorAll(".number-input button").forEach(btn => {
 
   const step = (event) => {
 
-    const multiplier = event.shiftKey ? 5 : 1
+    let multiplier = 1
+
+    if (event.ctrlKey) multiplier = 10
+    else if (event.shiftKey) multiplier = 5
 
     adjustValue(input, direction * multiplier)
 
@@ -210,16 +213,21 @@ document.querySelectorAll(".number-input input").forEach(input => {
 
   input.addEventListener("keydown", (e) => {
 
+    let multiplier = 1
+
+    if (e.ctrlKey) multiplier = 10
+    else if (e.shiftKey) multiplier = 5
+
     if (e.key === "ArrowUp") {
 
-      adjustValue(input, e.shiftKey ? 5 : 1)
+      adjustValue(input, multiplier)
       e.preventDefault()
 
     }
 
     if (e.key === "ArrowDown") {
 
-      adjustValue(input, e.shiftKey ? -5 : -1)
+      adjustValue(input, -multiplier)
       e.preventDefault()
 
     }
