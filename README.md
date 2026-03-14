@@ -26,7 +26,7 @@ No backend. No dependencies. Just HTML, CSS, and JavaScript.
 
 ## Screenshot
 
-*(add one once the UI is finalized)*
+![Hunt XP Calculator UI](page.png)
 
 ---
 
@@ -83,18 +83,6 @@ XP values are based on Hunt: Showdown in-game progression data.
 Data has been collected by [Tobias Kunz](https://github.com/ChubbyPandaAT) and myself, logic and website has been written by myself.
 
 If Crytek changes XP values in future updates or events, the values in `data.js` may need to be updated.
-
----
-
-## Roadmap
-
-Planned improvements:
-
-* Improved styling / UI
-* Mobile-friendly layout
-* Table-based layout instead of ASCII formatting
-* Event-specific XP adjustments
-* Single-file build (HTML + JS)
 
 ---
 
