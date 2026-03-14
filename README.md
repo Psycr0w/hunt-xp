@@ -80,7 +80,7 @@ logic.js
 ## Data Sources
 
 XP values are based on Hunt: Showdown in-game progression data.
-Data has been collected by (insert Tobi) and myself, logic and website has been written by myself.
+Data has been collected by [Tobias Kunz](https://github.com/ChubbyPandaAT) and myself, logic and website has been written by myself.
 
 If Crytek changes XP values in future updates or events, the values in `data.js` may need to be updated.
 
