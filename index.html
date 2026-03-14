@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Hunt: Showdown XP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>Hunt: Showdown XP Planner</h1>
+
+<p>
+Calculate remaining XP and required actions for hunter and bloodline progression.
+Adjust levels to see how many kills or actions are needed to finish the grind.
+</p>
+
+</div>
+
+<div class="controls">
+
+  <div class="control">
+    <label for="hunterLevel">Hunter Level</label>
+
+    <div class="number-input">
+      <button class="minus" data-target="hunterLevel">−</button>
+
+      <input
+        id="hunterLevel"
+        type="number"
+        min="1"
+        max="50"
+        value="1"
+      >
+
+      <button class="plus" data-target="hunterLevel">+</button>
+    </div>
+  </div>
+
+
+  <div class="control">
+    <label for="bloodlineLevel">Bloodline Level</label>
+
+    <div class="number-input">
+      <button class="minus" data-target="bloodlineLevel">−</button>
+
+      <input
+        id="bloodlineLevel"
+        type="number"
+        min="1"
+        max="100"
+        value="1"
+      >
+
+      <button class="plus" data-target="bloodlineLevel">+</button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+  <div class="panel">
+    <h2>Hunter</h2>
+    <pre id="hunterOutput"></pre>
+  </div>
+
+  <div class="panel">
+    <h2>Bloodline</h2>
+    <pre id="bloodlineOutput"></pre>
+  </div>
+
+</div>
+
+
+<script src="data.js"></script>
+<script src="logic.js"></script>
+<footer class="footer">
+
+<div class="footer-inner">
+
+<span class="footer-tip">
+Tip: Hold <kbd>Shift</kbd> while clicking ± or using ↑ ↓ to adjust levels by 5.
+</span>
+
+<span>
+Hunt: Showdown XP Calculator • Static tool built with HTML, CSS, and JavaScript
+</span>
+
+<span>
+<a href="https://github.com/yourrepo/hunt-xp-calc" target="_blank">
+Source on GitHub
+</a>
+</span>
+
+</div>
+
+</footer>
+</body>
+</html>
