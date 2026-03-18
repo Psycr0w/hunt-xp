@@ -103,7 +103,7 @@ function buildBloodlineTable(restXP) {
   const retirement = data.bloodlineActions["Retirement"]
 
   output +=
-    "Old Folks Home".padEnd(22) +
+    "Retire hunter".padEnd(22) +
     retirement.toString().padStart(8) +
     Math.ceil(restXP / retirement).toString().padStart(8) +
     "\n"

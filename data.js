@@ -1,3 +1,9 @@
+/*
+ Data collection by:
+ https://github.com/ChubbyPandaAT
+ https://github.com/Psycr0w
+ */
+
 const data = {
   xpList: { "Leech": 10,
                     "Grunt": 20,
