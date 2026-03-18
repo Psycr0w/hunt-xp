@@ -8,6 +8,7 @@ const data = {
   xpList: { "Leech": 10,
                     "Grunt": 20,
                     "Hellhound": 30,
+                    "Firebreather": 60,
                     "Hive": 60,
                     "Immolator": 60,
                     "Armored": 60,
