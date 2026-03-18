@@ -1,5 +1,6 @@
 # Hunt: Showdown XP Calculator
 
+[Link to calculator](https://psycr0w.github.io/hunt-xp/)
 Small web-based calculator for estimating how many actions are required to reach the next Hunter or Bloodline level in **Hunt: Showdown**.
 
 Originally written as a Python CLI/GUI tool, this version runs entirely in the browser and can be hosted as a static site.
