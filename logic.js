@@ -71,7 +71,7 @@ function buildHunterTable(restXP) {
 
   for (const [name, xp] of sortedActions()) {
 
-    const count = xp ? Math.ceil(restXP / xp) : ""
+    const count = xp ? Math.floor(restXP / xp) : ""
 
     output +=
       name.padEnd(18) +
@@ -97,7 +97,7 @@ function buildBloodlineTable(restXP) {
   output +=
     "lvl 50 Hunter".padEnd(22) +
     full.toString().padStart(8) +
-    Math.ceil(restXP / full).toString().padStart(8) +
+    Math.floor(restXP / full).toString().padStart(8) +
     "\n"
 
   const retirement = data.bloodlineActions["Retirement"]
@@ -105,7 +105,7 @@ function buildBloodlineTable(restXP) {
   output +=
     "Retire hunter".padEnd(22) +
     retirement.toString().padStart(8) +
-    Math.ceil(restXP / retirement).toString().padStart(8) +
+    Math.floor(restXP / retirement).toString().padStart(8) +
     "\n"
 
   const poster = data.bloodlineActions["Poster"]
@@ -113,14 +113,14 @@ function buildBloodlineTable(restXP) {
   output +=
     "Poster".padEnd(22) +
     poster.toString().padStart(8) +
-    Math.ceil(restXP / poster).toString().padStart(8) +
+    Math.floor(restXP / poster).toString().padStart(8) +
     "\n"
 
   output += "\n"
 
   for (const [name, xp] of sortedActions()) {
 
-    const count = xp ? Math.ceil(restXP / xp) : ""
+    const count = xp ? Math.floor(restXP / xp) : ""
 
     output +=
       name.padEnd(22) +
